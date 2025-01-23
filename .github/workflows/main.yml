@@ -21,6 +21,7 @@ on:
 # A workflow run is made up of one or more jobs that can run sequentially or in parallel
 jobs:
   window-build:
+    if: false
     runs-on: windows-latest
     strategy:
       matrix:
@@ -337,6 +338,7 @@ jobs:
 
   # This workflow contains a single job called "build"
   linux-x86-build:
+    if: false
     # The type of runner that the job will run on
     runs-on: ubuntu-24.04
 
@@ -651,6 +653,7 @@ jobs:
       #     asset_content_type: application/zip                  
 
   ios-build:
+    if: false
     # The type of runner that the job will run on
     runs-on: macos-latest
     permissions:
@@ -725,6 +728,7 @@ jobs:
       #   if: github.ref == 'refs/heads/master'
 
   window-msvc2019-build:
+    if: false
     runs-on: windows-latest
     strategy:
       matrix:
@@ -933,6 +937,7 @@ jobs:
         if:  ${{ ! matrix.config.python }}
 
   window-msvc2019-aiserver-build:
+    if: false
     runs-on: windows-latest
     steps:
       - uses: actions/checkout@v2
@@ -1082,6 +1087,7 @@ jobs:
           path: windows-msvc2019-ai-server-binary.zip
 
   raspberry-pi-build:
+    if: false
     runs-on: ubuntu-latest
     
     steps:
@@ -1136,6 +1142,7 @@ jobs:
           path: src/qdomyos-zwift-32bit
 
   raspberry-pi-build-and-image-64bit:
+    if: false
     runs-on: ubuntu-latest
     
     steps:
